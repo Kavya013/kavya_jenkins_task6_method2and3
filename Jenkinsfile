@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Kavya013/kavya_jenkins_task6_method2and3'  
+                git branch: 'main', url: 'https://github.com/Kavya013/kavya_jenkins_task6_method2and3' 
             }
         }
 
