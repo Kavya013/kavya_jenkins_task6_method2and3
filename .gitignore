@@ -1,0 +1,21 @@
+# Ignore target directory (compiled files)
+target/
+
+# Ignore Maven wrapper files (if present)
+mvnw
+mvnw.cmd
+.pom.xml.tag
+pom.xml.releaseBackup
+dependency-reduced-pom.xml
+release.properties
+
+# Ignore VS Code settings
+.vscode/
+
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
