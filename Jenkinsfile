@@ -7,15 +7,24 @@ pipeline {
     }
 
     environment {
-        MAVEN_PATH = 'C:\\Users\\prabh\\Downloads\\apache-maven-3.9.9\\bin'
-        JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17'
-        PATH = "${MAVEN_PATH};${JAVA_HOME};${env.PATH}"  
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17"
+        MAVEN_PATH = "C:\\Users\\prabh\\Downloads\\apache-maven-3.9.9\\bin"
+        PATH = "${JAVA_HOME}\\bin;${MAVEN_PATH};C:\\Windows\\System32;C:\\Windows"  
     }
 
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/Kavya013/kavya_jenkins_task6_method2and3' 
+            }
+        }
+
+        stage('Verify Tools') {
+            steps {
+                script {
+                    bat 'java -version'
+                    bat 'mvn -version'
+                }
             }
         }
 
